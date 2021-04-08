@@ -4,9 +4,9 @@
 
 This is a [challenge](https://www.kaggle.com/c/ima205challenge2021/overview) for our course IMA205. There are 2 tasks: binary classification and multi-class classification.
 
-- For binary classification, I use resnet101 based fpn
+- For binary classification, I use ResNet101 based FPN (modified FPN)
 
-- For multi-class classification, I use resnet152
+- For multi-class classification, I use ResNet152
 
 ## Recommended environment
 
@@ -27,19 +27,19 @@ Now I don't have the test labels
 
 - You can firstly have a look at the arguments of the train and evaluate python files
 
-```
+```shell
     python train_fpn_seg.py --help
 ```
 
 - Training example
 
-```
+```shell
     python train_fpn_seg.py --arch resnet101 --n_epoch 30 --schedule 10 20 30 --batch_size 96
 ```
 
 - You can also write it in a shell file and then run it
 
-```
+```shell
     sh train_fpn_seg.sh
 ```
 
@@ -47,19 +47,19 @@ Now I don't have the test labels
 
 - You can firstly have a look at the arguments of the prediction python files
 
-```
+```shell
     python evaluate_fpn_seg.py --help
 ```
 
 - Prediction example
 
-```
+```shell
     python evaluate_fpn_seg.py --arch resnet101 --resume checkpoint.pth_97.304.tar
 ```
 
 - You can also write it in a shell file and then run it
 
-```
+```shell
     sh evaluate_fpn_seg.sh
 ```
 
@@ -70,19 +70,18 @@ Here are some results
 ### Binary classification
 
 
-| BackBone | Net | Public Score |
-|  ----  | ----  |  ----  |
-| ResNet101 | FPN | 0.97304 |
+| BackBone | Net | Public Score | Pretrain Model |
+|  ----  | ----  |  ----  |  ----  |
+| ResNet101 | FPN | 0.97304 | [DownLoad](https://drive.google.com/file/d/1ykwxyfU0vMtTAY2BhRKajoZwiIZWezLN/view?usp=sharing) |
 
 
 
 ### Multi-class classification
 
 
-| BackBone | Public Score |
-|  ----  | ----  |
-| ResNet101 | 0.74248 |
-| ResNet152 | 0.79274 |
+| BackBone | Public Score | Pretrain Model |
+|  ----  | ----  |  ----  |
+| ResNet152 | 0.79274 | [DownLoad](https://drive.google.com/file/d/1D4AdjC5_c76hcPLh5pGFyaxXS9X4hDKM/view?usp=sharing) |
 
 
 
