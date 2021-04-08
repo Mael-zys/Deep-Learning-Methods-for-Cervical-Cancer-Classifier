@@ -1,0 +1,1 @@
+python evaluate_fpn_seg.py --arch resnet101 --resume /home/zhangyangsong/IMA205/checkpoints_fpn_seg/ic15_resnet101_bs_96_ep_30_97.304/checkpoint.pth_97.304.tar

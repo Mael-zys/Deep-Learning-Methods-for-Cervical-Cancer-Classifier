@@ -1,0 +1,9 @@
+*.tar
+*.jpg
+*.bmp
+*.png
+*.csv
+*.zip
+*.log
+*.out
+AutoML*/*

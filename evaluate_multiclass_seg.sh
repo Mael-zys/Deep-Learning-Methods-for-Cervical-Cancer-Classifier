@@ -1,0 +1,1 @@
+python evaluate_multiclass_seg.py --arch resnet152 --resume /home/zhangyangsong/IMA205/checkpoints_multi_seg/ic15_resnet152_bs_96_ep_40_79.274/checkpoint.pth.tar

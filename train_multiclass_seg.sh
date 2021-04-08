@@ -1,0 +1,1 @@
+python train_multiclass_seg.py --arch resnet152 --n_epoch 40 --schedule 10 20 30 --batch_size 96
