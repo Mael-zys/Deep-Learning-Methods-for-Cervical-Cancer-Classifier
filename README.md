@@ -19,13 +19,15 @@ This is a [challenge](https://www.kaggle.com/c/ima205challenge2021/overview) for
 
 ## Dataset [DownLoad](https://drive.google.com/file/d/1KAAGC6vucd3p0wOJ8RPF30jo8-zuDxbI/view?usp=sharing)
 
-Change the data directory in the dala loader files to your data directory.
+Change the data directory in the dala loader files (test_data_loader_seg.py, train_data_loader_seg.py, train_data_loader_multiclass_seg.py) to your own data directory.
 
 Now I don't have the test labels
 
 ## Train
 
-- You can firstly have a look at the arguments of the train and evaluate python files
+Before training, remember change the number of GPU in the train files according your number of GPU. 
+
+- You can firstly have a look at the arguments of the train and evaluate python files. For example,
 
 ```shell
     python train_fpn_seg.py --help
@@ -33,8 +35,16 @@ Now I don't have the test labels
 
 - Training example
 
+1. Binary classification:
+
 ```shell
     python train_fpn_seg.py --arch resnet101 --n_epoch 30 --schedule 10 20 30 --batch_size 96
+```
+
+2. Multiclass classification:
+
+```shell
+    python train_multiclass_seg.py --arch resnet152 --n_epoch 40 --schedule 10 20 30 --batch_size 96
 ```
 
 - You can also write it in a shell file and then run it
@@ -45,7 +55,7 @@ Now I don't have the test labels
 
 ## Prediction
 
-- You can firstly have a look at the arguments of the prediction python files
+- You can firstly have a look at the arguments of the prediction python files. For example:
 
 ```shell
     python evaluate_fpn_seg.py --help
@@ -53,11 +63,19 @@ Now I don't have the test labels
 
 - Prediction example
 
+1. Binary classification:
+
 ```shell
     python evaluate_fpn_seg.py --arch resnet101 --resume checkpoint.pth_97.304.tar
 ```
 
-- You can also write it in a shell file and then run it
+2. Multiclass classification:
+
+```shell
+    python evaluate_multiclass_seg.py --arch resnet152 --resume checkpoint.pth.tar
+```
+
+- You can also write it in a shell file and then run it. For example:
 
 ```shell
     sh evaluate_fpn_seg.sh
