@@ -105,4 +105,7 @@ Here are some results
 
 ## Reference
 
-To be continued
+1.	https://github.com/Mael-zys/PSENet
+2.	https://arxiv.org/pdf/1612.03144.pdf
+3.	https://arxiv.org/abs/1908.02650
+
